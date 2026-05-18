@@ -1,4 +1,4 @@
-# 🚨 Voice-Agent Emergency Call Management System
+# Voice-Agent Emergency Call Management System
 
 > **An AI-powered telephone hotline that triages medical emergencies in real time — built as an ICCS Final Project by Nils Neuner**
 
@@ -10,21 +10,9 @@
 [![Render](https://img.shields.io/badge/Deployed_on-Render-46E3B7?style=flat-square&logo=render&logoColor=black)](https://render.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)](LICENSE)
 
----
 
-## 📞 Try It Live
 
-Call the deployed system right now:
-
-```
-+1 (608) 549-5615
-```
-
-> ⚠️ The caller's phone number is stored in the database. This can be disabled on request.
-
----
-
-## 📖 Table of Contents
+## Table of Contents
 
 - [Motivation](#-motivation)
 - [System Architecture](#-system-architecture)
@@ -40,7 +28,7 @@ Call the deployed system right now:
 
 ---
 
-## 💡 Motivation
+## Motivation
 
 In large-scale humanitarian crises, emergency call services are often the first bottleneck — a shortage of human operators means incoming emergencies go unrecorded and ambulances are delayed. At the same time, digital reporting tools require literacy and connectivity that vulnerable populations may not have.
 
@@ -52,7 +40,7 @@ An AI voice agent answers, guides the caller through a structured conversation t
 
 ---
 
-## 🏗 System Architecture
+## System Architecture
 
 ```
 ┌─────────┐     ┌─────────────┐     ┌───────────────┐     ┌────────────┐
@@ -71,10 +59,10 @@ The system has **four principal components**:
 
 | Component | Description |
 |---|---|
-| 🎙️ **Voice Agent** | Answers calls via Twilio, uses Deepgram for speech-to-speech AI conversation |
-| 🏥 **Triage System** | LLM-based ESI classification triggered after each call |
-| 🗄️ **Database** | PostgreSQL storing all call sessions, locations, descriptions, and ESI results |
-| 🖥️ **Management GUI** | Desktop interface for emergency personnel to review and respond to cases |
+| **Voice Agent** | Answers calls via Twilio, uses Deepgram for speech-to-speech AI conversation |
+| **Triage System** | LLM-based ESI classification triggered after each call |
+| **Database** | PostgreSQL storing all call sessions, locations, descriptions, and ESI results |
+| **Management GUI** | Desktop interface for emergency personnel to review and respond to cases |
 
 ### Streaming Architecture
 
@@ -94,7 +82,7 @@ When the agent records an emergency description, the call's `streamSid` is pushe
 
 ---
 
-## ⚙️ How It Works
+## How It Works
 
 ### 1. Voice Agent (`main.py` + `agent_functions.py` + `config.json`)
 
@@ -127,7 +115,7 @@ Built with `tkinter` and `customtkinter`:
 
 ---
 
-## 🚀 Setup Guide
+## Setup Guide
 
 ### Option A — Use the Hosted Environment *(Recommended)*
 
@@ -202,7 +190,7 @@ python main.py
 
 ---
 
-## 🖥️ Running the GUI
+## Running the GUI
 
 The management interface runs **locally** and connects to the remote (or local) database.
 
@@ -219,7 +207,7 @@ python locals/GUI.py
 
 ---
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 .
@@ -240,18 +228,18 @@ python locals/GUI.py
 
 ---
 
-## 📊 Results & Limitations
+## Results & Limitations
 
 > The results of this project should be interpreted with caution. This is an **exploratory prototype**, not an endorsement for real-world deployment.
 
-### ✅ What Works
+### What Works
 
 - End-to-end voice call handling with real-time AI conversation
 - Automatic structured data capture (location, description) from unstructured phone calls
 - Asynchronous LLM-based triage running without interrupting live calls
 - Functional management GUI with live DB integration and manual overrides
 
-### ⚠️ Known Limitations
+### Known Limitations
 
 | Area | Limitation |
 |---|---|
@@ -262,7 +250,7 @@ python locals/GUI.py
 | **Localization** | No integration with country-specific emergency protocols or languages |
 | **Validation** | No testing against certified medical triage standards; no professional oversight built in |
 
-### 🔭 Outlook
+### Outlook
 
 A production-ready version would require:
 - All AI processing hosted within certified healthcare infrastructure
@@ -272,7 +260,7 @@ A production-ready version would require:
 
 ---
 
-## 🤖 AI Usage Statement
+## AI Usage Statement
 
 Generative AI tools (specifically ChatGPT) were used within the limits permitted by the course lecturer, in the following supportive capacities:
 
@@ -284,13 +272,7 @@ Generative AI tools (specifically ChatGPT) were used within the limits permitted
 
 ---
 
-## 🔗 Source Code
 
-The full source code is available at:
-
-👉 [https://cloud.uni-konstanz.de/index.php/f/227298721](https://cloud.uni-konstanz.de/index.php/f/227298721)
-
----
 
 <div align="center">
 
